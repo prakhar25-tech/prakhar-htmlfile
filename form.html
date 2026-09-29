@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Page</title>
+</head>
+<body>
+
+    <h1>Registration Form</h1>
+
+    <form action="login.html" method="post" enctype="multipart/form-data">
+
+        <label>Name:</label>
+        <input type="text" name="name" required>
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" name="password"
+               minlength="8" maxlength="20"
+               title="Password must be 8-20 characters long"
+               required>
+        <br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="other"> Other
+        <br><br>
+
+        <label>Date of Birth:</label>
+        <input type="date" name="dob">
+        <br><br>
+
+        <label>Upload File:</label>
+        <input type="file" name="file">
+        <br><br>
+
+        <label>Subjects:</label><br>
+        <input type="checkbox" name="subject" value="html"> HTML
+        <input type="checkbox" name="subject" value="css"> CSS
+        <input type="checkbox" name="subject" value="javascript"> JavaScript
+        <input type="checkbox" name="subject" value="python"> Python
+        <br><br>
+
+        <input type="submit" value="Register">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>
