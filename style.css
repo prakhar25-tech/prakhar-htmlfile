@@ -1,0 +1,634 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 125px;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background: #fff9f2;
+    color: #29251f;
+}
+
+header {
+    background: #fff;
+    min-height: 110px;
+    padding: 15px 4%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr auto auto;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #eee5db;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.brand {
+    text-align: center;
+    min-width: 145px;
+}
+
+.brand h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 43px;
+    letter-spacing: 4px;
+    line-height: 1;
+    color: #f07845;
+}
+
+.brand h1 span {
+    color: #302b25;
+}
+
+.brand p {
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    margin-top: 5px;
+}
+
+.delivery h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.delivery p {
+    font-size: 12px;
+    color: #777;
+}
+
+header input {
+    width: 100%;
+    padding: 14px;
+    background: #faf6f1;
+    border: 1px solid #eee0d2;
+    border-radius: 12px;
+    font-family: inherit;
+    outline-color: #f07845;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+}
+
+.login {
+    border: none;
+    background: transparent;
+    font-size: 15px;
+}
+
+.cart {
+    background: #f07845;
+    color: white;
+    border: none;
+    padding: 13px 17px;
+    border-radius: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding: 15px;
+    background: #302b25;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    transition: .2s;
+}
+
+nav a:hover {
+    color: #ffad83;
+}
+
+main {
+    max-width: 1250px;
+    margin: auto;
+    padding: 28px 4%;
+}
+
+.hero {
+    background: linear-gradient(120deg, #ffe5d4, #fff0d0);
+    border-radius: 28px;
+    padding: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    overflow: hidden;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.tag {
+    display: inline-block;
+    padding: 9px 13px;
+    border-radius: 20px;
+    background: white;
+    color: #df6636;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(55px, 7vw, 88px);
+    line-height: .95;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h2 span {
+    color: #f07845;
+}
+
+.hero p {
+    line-height: 1.8;
+    color: #6b584a;
+    margin-bottom: 25px;
+}
+
+.shop-btn, .deal-banner a {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 10px;
+    background: #f07845;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .25s;
+}
+
+.shop-btn:hover, .deal-banner a:hover {
+    background: #d95e30;
+    transform: translateY(-3px);
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+    font-size: 12px;
+    color: #51483e;
+}
+
+.hero-image {
+    position: relative;
+    width: 44%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 22px;
+}
+
+.floating-card {
+    position: absolute;
+    bottom: 15px;
+    left: -20px;
+    background: white;
+    padding: 14px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px #00000012;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.section-title {
+    font-size: 27px;
+    margin: 42px 0 8px;
+}
+
+.section-title span {
+    color: #f07845;
+}
+
+.subtitle {
+    color: #887d70;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 22px;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 19px;
+    background: white;
+    border: 1px solid #f0e6dc;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #302b25;
+    transition: .25s;
+}
+
+.category span {
+    font-size: 30px;
+}
+
+.category p {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.category:hover {
+    transform: translateY(-4px);
+    border-color: #f07845;
+    box-shadow: 0 8px 18px #00000009;
+}
+
+.deal-banner {
+    margin-top: 40px;
+    padding: 35px;
+    background: #302b25;
+    color: white;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.deal-banner > div:first-child > span {
+    color: #ffad83;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.deal-banner h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 45px;
+    letter-spacing: 1px;
+    margin: 12px 0;
+}
+
+.deal-banner p {
+    color: #ddd0c5;
+    margin-bottom: 22px;
+}
+
+.deal-emoji {
+    font-size: clamp(35px, 6vw, 75px);
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.product {
+    background: white;
+    border: 1px solid #f0e6dc;
+    border-radius: 18px;
+    padding: 13px;
+    position: relative;
+    transition: .25s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px #493b2b12;
+}
+
+.product img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 13px;
+}
+
+.discount {
+    position: absolute;
+    top: 21px;
+    left: 20px;
+    padding: 6px 8px;
+    background: #286847;
+    color: white;
+    border-radius: 5px;
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.type {
+    color: #e47443;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.product h3 {
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.quantity {
+    font-size: 12px;
+    color: #92877c;
+    margin-bottom: 16px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.price strong {
+    font-size: 17px;
+}
+
+.price del {
+    font-size: 11px;
+    color: #999;
+}
+
+.price button {
+    margin-left: auto;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #f07845;
+    background: #fff3ec;
+    color: #df6636;
+    transition: .2s;
+}
+
+.price button:hover {
+    background: #f07845;
+    color: white;
+}
+
+.why {
+    margin-top: 45px;
+    text-align: center;
+    padding: 35px 20px;
+    background: #edf3e5;
+    border-radius: 22px;
+}
+
+.why h2 {
+    font-size: 27px;
+    margin-bottom: 30px;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.why-grid div {
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+}
+
+.why-grid span {
+    font-size: 32px;
+}
+
+.why-grid h3 {
+    margin: 12px 0 8px;
+}
+
+.why-grid p {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.newsletter {
+    margin-top: 35px;
+    padding: 35px 20px;
+    text-align: center;
+    background: #ffe5d4;
+    border-radius: 22px;
+}
+
+.newsletter h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    color: #78675a;
+    margin-bottom: 20px;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.newsletter input {
+    width: min(350px, 65%);
+    padding: 13px;
+    border: 1px solid #e8c6b1;
+    border-radius: 9px;
+    font-family: inherit;
+}
+
+.newsletter button {
+    border: none;
+    padding: 13px 17px;
+    border-radius: 9px;
+    color: white;
+    background: #f07845;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px;
+    background: #302b25;
+    color: white;
+    border-radius: 20px;
+}
+
+footer .brand {
+    margin-bottom: 20px;
+}
+
+footer .brand h1 span {
+    color: white;
+}
+
+footer .brand p {
+    color: #ffad83;
+}
+
+footer > p {
+    font-size: 13px;
+    color: #d0c5b9;
+    margin-top: 12px;
+}
+
+@media (max-width: 950px) {
+    header {
+        grid-template-columns: 1fr 1fr auto auto;
+    }
+
+    header .brand {
+        grid-column: 1 / -1;
+    }
+
+    header input {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+
+    .delivery {
+        grid-column: 1 / 3;
+    }
+
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav {
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 550px) {
+    main {
+        padding: 18px 4%;
+    }
+
+    header {
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .hero {
+        padding: 25px;
+    }
+
+    .hero-image {
+        display: none;
+    }
+
+    .hero h2 {
+        font-size: 65px;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .categories {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .category {
+        padding: 13px 9px;
+        gap: 8px;
+    }
+
+    .category span {
+        font-size: 24px;
+    }
+
+    .category p {
+        font-size: 12px;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .product {
+        padding: 9px;
+    }
+
+    .product img {
+        height: 120px;
+    }
+
+    .product h3 {
+        font-size: 14px;
+    }
+
+    .price {
+        flex-wrap: wrap;
+    }
+
+    .price button {
+        padding: 7px 9px;
+    }
+
+    .deal-banner {
+        padding: 23px;
+    }
+
+    .deal-emoji {
+        font-size: 30px;
+    }
+
+    .deal-banner h2 {
+        font-size: 36px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter input {
+        width: 100%;
+    }
+
+    .newsletter button {
+        width: 100%;
+    }
+
+    nav {
+        gap: 14px;
+        padding: 13px 8px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+}
